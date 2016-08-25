@@ -182,6 +182,9 @@ public class MainActivity extends ActionBarActivity {
             case 1:
                 fragment = new Filters();
                 break;
+            case 2:
+                fragment = new Service();
+                break;
             default:
                 break;
         }

@@ -14,11 +14,18 @@
     <string name="filter_6">Change Date</string>
     <string name="filter_4">You will be notified to clean your filters again on</string>
     <string name="filter_5">You are overdue on your filter cleaning! Make sure you clean your filters than come back and update the date.</string>
-
+    <string name="service_1">Select your furnace type from the dropdown menu below:</string>
+    <string name="service_2">Enter the date of your last service appointment:</string>
+    <string name="service_3">Enter Date</string>
     <string-array name="nav_drawer_items">
         <item>About</item>
         <item>Filters</item>
         <item>Service</item>
         <item>Recommend</item>
+    </string-array>
+    <string-array name="furnace_type">
+        <item>Oil furnace/Boiler</item>
+        <item>Natural Gas</item>
+        <item>A/C</item>
     </string-array>
 </resources>
