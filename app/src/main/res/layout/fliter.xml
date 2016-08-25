@@ -19,18 +19,35 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/filter_1"
             android:textSize="18sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/current_filter_date"
             android:textStyle="bold"
             android:textColor="@color/text_color"
+            android:layout_marginBottom="30dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/filter_6"
+            android:id="@+id/change_date_filter"
             android:layout_marginBottom="30dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="16dp"
+            android:gravity="center"
+            android:id="@+id/filter_notified"
+            android:textSize="18dp"
             android:textStyle="bold"
-
-            android:textColor="@color/text_color"/>
+            android:textColor="@color/text_color"
+            android:layout_marginBottom="30dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/filter_dirty"/>
     </LinearLayout>
 </ScrollView>

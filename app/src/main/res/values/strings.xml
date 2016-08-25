@@ -9,7 +9,11 @@
     <string name="about_6">Mon-Fri 8-4pm</string>
     <string name="about_7">Use the buttons above to call or email us!</string>
     <string name="filter_1">Enter the last time you cleaned your fliter:</string>
-    <string name="fliter_2">Enter Date</string>
+    <string name="filter_2">Next</string>
+    <string name="filter_3">You cleaned your filters last on</string>
+    <string name="filter_6">Change Date</string>
+    <string name="filter_4">You will be notified to clean your filters again on</string>
+    <string name="filter_5">You are overdue on your filter cleaning! Make sure you clean your filters than come back and update the date.</string>
 
     <string-array name="nav_drawer_items">
         <item>About</item>
