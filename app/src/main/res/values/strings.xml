@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">JD Heating &amp; Cooling</string>
+    <string name="action_call">Call</string>
+    <string name="about_1">Your home comfort is not somethhing you ever want to think about. Protectiong your family and your hoime is important and choosing the right company to help you along the way can be just as important. With that in mind, JD Heating and Cooling is know for quality workmanship and professional serivice, and is recognized by industry community leaders; Hutchinson Fuels and Noco (Esso). Experience the difference our quality and service can make in your home.</string>
+    <string name="about_2">370 Boes Rd\nBrighton, ON K0K 1H0</string>
+    <string name="about_3"> </string>
+    <string name="about_4">Office: 1-855-902-5209</string>
+    <string name="email">jdheatingandcooling@gmail.com</string>
+    <string name="about_6">Mon-Fri 8-4pm</string>
+    <string name="about_7">Use the buttons above to call or email us!</string>
+    <string name="filter_1">Enter the last time you cleaned your fliter:</string>
+    <string name="fliter_2">Enter Date</string>
+
+    <string-array name="nav_drawer_items">
+        <item>About</item>
+        <item>Filters</item>
+        <item>Service</item>
+        <item>Recommend</item>
+    </string-array>
+</resources>
