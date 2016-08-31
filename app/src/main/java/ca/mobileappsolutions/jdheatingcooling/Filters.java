@@ -147,7 +147,5 @@ public class Filters extends Fragment {
         dict.put(9, "October");
         dict.put(10, "November");
         dict.put(11, "December");
-
-
     }
 }

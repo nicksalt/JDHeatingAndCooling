@@ -15,8 +15,10 @@
     <string name="filter_4">You will be notified to clean your filters again on</string>
     <string name="filter_5">You are overdue on your filter cleaning! Make sure you clean your filters than come back and update the date.</string>
     <string name="service_1">Select your furnace type from the dropdown menu below:</string>
-    <string name="service_2">Enter the date of your last service appointment:</string>
+    <string name="service_2">Click the button below to enter the date of your last service appointment:</string>
     <string name="service_3">Enter Date</string>
+    <string name="service_4">Your last service was on</string>
+    <string name="service_5">Never had a service appointment? Contact us now to book an appointment!</string>
     <string-array name="nav_drawer_items">
         <item>About</item>
         <item>Filters</item>
