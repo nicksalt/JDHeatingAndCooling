@@ -3,6 +3,7 @@ package ca.mobileappsolutions.jdheatingcooling;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -113,6 +114,14 @@ public class Filters extends Fragment {
             }
             else {
                 text = getResources().getString(R.string.filter_4) + " " +  dict.get(month) + " " + Integer.toString(day) + ", " + Integer.toString(year);
+                SharedPreferences.Editor e = myPrefs.edit();
+                e.putInt("year", year);
+                e.putInt("month", month);
+                e.putInt("day", day);
+                e.putBoolean("filterDateSet", true);
+                e.apply();
+                Intent startService = new Intent(getActivity(), TimeService.class);
+                getActivity().startService(startService);
             }
         }
         catch (ParseException e){

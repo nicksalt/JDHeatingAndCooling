@@ -18,7 +18,12 @@
     <string name="service_2">Click the button below to enter the date of your last service appointment:</string>
     <string name="service_3">Enter Date</string>
     <string name="service_4">Your last service was on</string>
-    <string name="service_5">Never had a service appointment? Contact us now to book an appointment!</string>
+    <string name="service_5">Never had a service appointment? Contact us now to book an appointment!</string>.
+    <string name="service_6">We recommend you get your next service on</string>
+    <string name="service_7">You will be reminded three months before to book your appointment.</string>
+    <string name="service_8">You are overdue on your service! Contact JD Heating &amp; Cooling to book an appointment, then come back to the app to update this page!</string>
+    <string name="recommed_1">Please recommend our services to a friend!</string>
+    <string name="recommend_2">Send</string>
     <string-array name="nav_drawer_items">
         <item>About</item>
         <item>Filters</item>

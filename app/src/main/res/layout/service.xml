@@ -57,15 +57,27 @@
             android:textStyle="bold"
             android:text="@string/service_5"
             android:textColor="@color/text_color"
+            android:layout_marginBottom="30dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/service_date_entered"
+            android:textColor="@color/text_color"
             android:layout_marginBottom="20dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:layout_gravity="center"
-            android:id="@+id/service_date_entered"
+            android:gravity="center"
+            android:id="@+id/nex_service_text"
+            android:textStyle="bold"
             android:textColor="@color/text_color"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="20dp"/>
 
     </LinearLayout>
 </ScrollView>
