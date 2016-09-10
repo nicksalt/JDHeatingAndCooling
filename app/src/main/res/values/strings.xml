@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">JD Heating &amp; Cooling</string>
     <string name="action_call">Call</string>
-    <string name="about_1">Your home comfort is not somethhing you ever want to think about. Protectiong your family and your hoime is important and choosing the right company to help you along the way can be just as important. With that in mind, JD Heating and Cooling is know for quality workmanship and professional serivice, and is recognized by industry community leaders; Hutchinson Fuels and Noco (Esso). Experience the difference our quality and service can make in your home.</string>
+    <string name="about_1">Your home comfort is not something you ever want to think about. Protecting your family and your home is important and choosing the right company to help you along the way can be just as important. With that in mind, JD Heating and Cooling is know for quality workmanship and professional service, and is recognized by industry community leaders; Hutchinson Fuels and Noco (Esso). Experience the difference our quality and service can make in your home.</string>
     <string name="about_2">370 Boes Rd\nBrighton, ON K0K 1H0</string>
     <string name="about_3"> </string>
     <string name="about_4">Office: 1-855-902-5209</string>
@@ -20,7 +20,7 @@
     <string name="service_4">Your last service was on</string>
     <string name="service_5">Never had a service appointment? Contact us now to book an appointment!</string>.
     <string name="service_6">We recommend you get your next service on</string>
-    <string name="service_7">You will be reminded three months before to book your appointment.</string>
+    <string name="service_7">You will be in advanced to book your appointment.</string>
     <string name="service_8">You are overdue on your service! Contact JD Heating &amp; Cooling to book an appointment, then come back to the app to update this page!</string>
     <string name="recommed_1">Please recommend our services to a friend!</string>
     <string name="recommend_2">Send</string>

@@ -1,20 +1,16 @@
 package ca.mobileappsolutions.jdheatingcooling;
 
 
-import android.annotation.TargetApi;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Build;
+
 import android.app.Service;
 import android.os.IBinder;
-import android.util.Log;
 
-import java.io.IOException;
 import java.util.Calendar;
-import java.util.logging.Filter;
 
 import static android.app.Service.START_NOT_STICKY;
 
@@ -27,7 +23,6 @@ public class TimeService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         SharedPreferences myPrefs = getApplicationContext().getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
-        Log.d("RUNNING TIME SERVICE", "  ");
 
         if (myPrefs.getBoolean("filterDateSet", false)){
             Calendar calendar = Calendar.getInstance();
@@ -48,7 +43,6 @@ public class TimeService extends Service {
         }
         if (myPrefs.getBoolean("serviceDateSet", false)){
             Calendar calendar1 = Calendar.getInstance();
-            Calendar c = Calendar.getInstance();
             calendar1.set(Calendar.MONTH, myPrefs.getInt("serviceMonth", 0));
             calendar1.set(Calendar.YEAR, myPrefs.getInt("serviceYear", 0));
             calendar1.set(Calendar.DAY_OF_MONTH, myPrefs.getInt("serviceDay", 0));
@@ -56,7 +50,6 @@ public class TimeService extends Service {
             calendar1.set(Calendar.HOUR_OF_DAY, 12);
             calendar1.set(Calendar.MINUTE, 0);
             calendar1.set(Calendar.SECOND, 0);
-
             Intent myIntent1 = new Intent(TimeService.this, ServiceReciever.class);
             PendingIntent pendingIntent1 = PendingIntent.getBroadcast(TimeService.this, 0, myIntent1,0);
 

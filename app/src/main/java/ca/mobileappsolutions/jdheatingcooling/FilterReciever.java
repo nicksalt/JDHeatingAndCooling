@@ -22,7 +22,6 @@ public class FilterReciever extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("Notifcation", "Running");
         String notText ="Time to clean your filters! Go to the JD Heating & Cooling app to update the date.";
 
         android.support.v4.app.NotificationCompat.Builder mBuilder =

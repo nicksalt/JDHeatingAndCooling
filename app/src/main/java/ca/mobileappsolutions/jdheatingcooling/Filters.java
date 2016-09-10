@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +36,6 @@ public class Filters extends Fragment {
         myPrefs = getActivity().getSharedPreferences("myPrefs", Context.MODE_PRIVATE);
         if (myPrefs.getBoolean("datePicked", true)){
             rootView= inflater.inflate(R.layout.calendar, container, false);
-            Log.d("RUN", "LOOP");
             setDatePicker();
             
         }
@@ -80,11 +78,9 @@ public class Filters extends Fragment {
         lastDate.setText(text);
         if (month>8){
             year+=1;
-            Log.d("Test", dict.get(month) + " " + Integer.toString(day) + ", " + Integer.toString(year));
             month-=12;
         }
         month+=3;
-        Log.d("Test", dict.get(month) + " " + Integer.toString(day) + ", " + Integer.toString(year));
         if (day ==31){
             if (month==3 || month==5 || month==8 || month==5 || month==10){
                 day-=30;
@@ -104,7 +100,6 @@ public class Filters extends Fragment {
                 }
             }
         }
-        Log.d("Test2", dict.get(month) + " " + Integer.toString(day) + ", " + Integer.toString(year));
         String myDate = Integer.toString(day)+"/"+Integer.toString(month+1)+"/"+Integer.toString(year);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try{

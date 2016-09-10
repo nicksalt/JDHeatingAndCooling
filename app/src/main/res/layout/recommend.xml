@@ -15,6 +15,43 @@
         android:textSize="18sp"
         android:layout_gravity="center"
         android:textStyle="bold"
-        android:textColor="@color/text_color"/>
+        android:textColor="@color/text_color"
+        android:layout_marginBottom="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To: (Email seperated by comma)"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/toEmail" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message:"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/message" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/send_email"
+        android:text="@string/recommend_2"
+        android:textStyle="bold"/>
+
 
 </LinearLayout>

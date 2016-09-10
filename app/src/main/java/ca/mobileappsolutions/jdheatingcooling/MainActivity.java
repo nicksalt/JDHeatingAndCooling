@@ -17,7 +17,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -53,7 +52,10 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setIcon(R.drawable.transparent);
-
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+        }
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.colorAccent)));
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -66,10 +68,8 @@ public class MainActivity extends ActionBarActivity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
-        Log.d("ARRAY LEN", Integer.toString(navMenuTitles.length));
         navDrawerItems = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
-            Log.d("NUM", Integer.toString(i));
             navDrawerItems.add(new NavDrawerItem(navMenuTitles[i]));
         }
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
@@ -106,7 +106,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void phoneCall() {
         Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:6136619805"));
+        callIntent.setData(Uri.parse("tel:18559025209"));
         if ( ContextCompat.checkSelfPermission( this, Manifest.permission.CALL_PHONE ) == PackageManager.PERMISSION_GRANTED ) {
             startActivity(callIntent);
         }
@@ -174,7 +174,6 @@ public class MainActivity extends ActionBarActivity {
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
-        Log.d("Position", Integer.toString(position));
         switch (position) {
             case 0:
                 fragment = new About();
@@ -185,6 +184,8 @@ public class MainActivity extends ActionBarActivity {
             case 2:
                 fragment = new Service();
                 break;
+            case 3:
+                fragment = new Recommend();
             default:
                 break;
         }
@@ -201,9 +202,35 @@ public class MainActivity extends ActionBarActivity {
             mDrawerLayout.closeDrawer(mDrawerList);
         } else {
             // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
         }
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case 1: {
+
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    // permission was granted, yay! Do the
+                    // contacts-related task you need to do.
+                } else {
+
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    Toast.makeText(MainActivity.this, "Permission denied to use phone", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
+        }
+    }
+
 
 
 

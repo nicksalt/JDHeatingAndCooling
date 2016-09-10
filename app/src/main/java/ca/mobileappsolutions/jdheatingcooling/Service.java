@@ -4,9 +4,9 @@ import android.app.AlertDialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +60,6 @@ public class Service extends Fragment{
             @Override
             public void onClick(View view) {
                 int position = spinner.getSelectedItemPosition();
-                Log.d("position", String.valueOf(position));
                 e.putInt("position", position);
                 e.apply();
                 DialogFragment newFragment = new SelectDateFragment();
@@ -82,17 +81,14 @@ public class Service extends Fragment{
             SharedPreferences.Editor e = myPrefs.edit();
             if (furnaceType.equals(arrayList[0])){
                 time = 1;
-                Log.d("Run", "0");
                 e.putString("serviceDateSet", arrayList[0]);
             }
             else if (furnaceType.equals(arrayList[1])){
                 time=2;
-                Log.d("Run", "1");
                 e.putString("serviceDateSet", arrayList[1]);
             }
             else if (furnaceType.equals(arrayList[2])){
                 time=2;
-                Log.d("Run", "2");
                 e.putString("serviceDateSet", arrayList[2]);
             }
             Integer yearInt = Integer.valueOf(year);
@@ -126,6 +122,8 @@ public class Service extends Fragment{
             e.putInt("serviceMonth", yearInt);
             e.putBoolean("serviceDateSet", true);
             e.apply();
+            Intent startService = new Intent(getActivity(), TimeService.class);
+            getActivity().startService(startService);
             TextView textView1 = (TextView) view.findViewById(R.id.nex_service_text);
             textView1.setText(text);
 
